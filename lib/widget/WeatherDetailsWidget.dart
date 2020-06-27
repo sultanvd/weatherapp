@@ -122,7 +122,7 @@ class WeatherDetailsState extends State<WeatherDetailsWidget> {
       showProgressDialog();
       var response = weatherDataService.loadCityDetails(cityItem);
       response.then((weatherData) => setWeatherDetails(weatherData),
-          onError: (error) => {  setWeatherDetails(WeatherData()) })
+          onError: (error) => setWeatherDetails(WeatherData()))
       .whenComplete(() => hideProgressDialog());
     } else {
       setWeatherDetails(WeatherData());

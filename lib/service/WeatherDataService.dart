@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'dart:ffi';
+
 
 import 'package:assignment4/model/CityItem.dart';
 import 'package:assignment4/model/WeatherData.dart';
@@ -63,7 +63,7 @@ class WeatherDataService {
     String city = weatherDetails.name;
     String country = weatherDetails.sys.country;
 
-    return WeatherData.weatherDetails(temp + DEGREE_SYMBOL, "${tempMin} - ${tempMax} ${DEGREE_SYMBOL}", status, city, country);
+    return WeatherData.weatherDetails(temp + DEGREE_SYMBOL, "$tempMin - $tempMax $DEGREE_SYMBOL", status, city, country);
   }
 
   double convertKelvinToCelcius(double tempInKelvin){
